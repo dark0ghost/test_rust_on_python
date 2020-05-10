@@ -2,14 +2,15 @@
 mod tests {
     #[test]
     fn it_works() {
-        assert_eq!()
+
     }
 }
 
 #[macro_use]
 extern crate cpython;
 
-
+mod lid_extend;
+use lid_extend::extend_lib;
 
 use cpython::{Python, PyResult};
 

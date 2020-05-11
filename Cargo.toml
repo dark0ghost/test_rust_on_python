@@ -4,15 +4,14 @@ version = "0.1.0"
 authors = ["dark0ghost"]
 edition = "2018"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 
 [lib]
 name = "fastpython"
 crate-type = ["cdylib"]
 
 [dependencies]
+#cpython = "0.5.0"
 
 [dependencies.cpython]
-version = "0.5"
+version = "0.5.0"
 features = ["extension-module"]

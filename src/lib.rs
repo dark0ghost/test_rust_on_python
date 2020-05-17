@@ -1,21 +1,23 @@
+extern crate cpython;
+mod extend;
+
+use cpython::{py_module_initializer, py_fn};
+use extend::py_implementation::{py_sum_int};
+
+
+
 #[cfg(test)]
 mod tests {
-    use crate::extend::math::Math;
-    use cpython::{ ToPyObject};
+    use crate::extend::test::{test_sum_int};
     #[test]
-    fn it_works() {
-        let a = Math::__init__();
+    fn test_sum() {
+        assert!(test_sum_int(),"test sum int")
+    }
+    #[test]
+    fn test2(){
 
     }
 }
-
-//#[macro_use]
-extern crate cpython;
-use cpython::{py_module_initializer, py_fn};
-
-mod extend;
-
-use extend::py_implementation::{py_sum_int};
 
 
 
